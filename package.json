@@ -1,0 +1,15 @@
+{
+  "name": "vlo-milestone",
+  "version": "0.0.1",
+  "description": "get milestone info for VLO changes.txt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPLv3",
+  "dependencies": {
+    "jsonpath": "^0.2.11",
+    "rest": "^2.0.0"
+  }
+}
