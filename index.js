@@ -5,9 +5,10 @@ var mime = require('rest/interceptor/mime');
 var client = rest.wrap(mime);
 
 var milestoneId = 3; 
+var state = "open"; //open|closed|all
 
 var req = {
-	path: 'https://api.github.com/repos/clarin-eric/VLO/issues?milestone=' + milestoneId + '&state=all',
+	path: 'https://api.github.com/repos/clarin-eric/VLO/issues?milestone=' + milestoneId + '&state=' + state,
 	headers: {
 		'User-Agent': 'clarin-vlo-script'
 	}
