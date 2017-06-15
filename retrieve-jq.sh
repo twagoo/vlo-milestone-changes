@@ -7,9 +7,4 @@ STATE="open"
 
 URI="https://api.github.com/repos/clarin-eric/VLO/issues?milestone=${MILESTONE}&state=${STATE}"
 
-#URLs
-echo Fetching URLs > /dev/stderr
-URLS=`curl -s $URI | jq ".[].html_url"`
-#Titles
-echo Fetching Titles > /dev/stderr
-TITLES=`curl -s $URI | jq ".[].title"`
+curl -s $URI | jq -r ".[]|.title,.html_url"
