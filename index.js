@@ -1,13 +1,13 @@
 var jp = require('jsonpath');
 var Client = require('node-rest-client').Client;
 var rest = require('rest');
-
-
 var mime = require('rest/interceptor/mime');
 var client = rest.wrap(mime);
 
+var milestoneId = 3; 
+
 var req = {
-	path: 'https://api.github.com/repos/clarin-eric/VLO/issues?milestone=3&state=all',
+	path: 'https://api.github.com/repos/clarin-eric/VLO/issues?milestone=' + milestoneId + '&state=all',
 	headers: {
 		'User-Agent': 'clarin-vlo-script'
 	}
