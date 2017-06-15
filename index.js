@@ -7,7 +7,7 @@ var mime = require('rest/interceptor/mime');
 var client = rest.wrap(mime);
 
 var req = {
-	path: 'https://api.github.com/repos/clarin-eric/VLO/issues?milestone=3',
+	path: 'https://api.github.com/repos/clarin-eric/VLO/issues?milestone=3&state=all',
 	headers: {
 		'User-Agent': 'clarin-vlo-script'
 	}
@@ -16,11 +16,11 @@ var req = {
 
 client(req).then(function(response) {
 	var data = response.entity;
-	var urls = jp.query(data, '$.*.url');
+	var urls = jp.query(data, '$.*.html_url');
 	var titles = jp.query(data, '$.*.title');
 	
 	for(i=0;i<urls.length;i++) {
 		console.log('* ' + titles[i]);
-		console.log('	<' + urls[i] + '>');
+		console.log('    <' + urls[i] + '>');
 	}
 });
