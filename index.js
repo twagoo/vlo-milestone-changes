@@ -4,7 +4,7 @@ var rest = require('rest');
 var mime = require('rest/interceptor/mime');
 var client = rest.wrap(mime);
 
-var milestoneId = 4; 
+var milestoneId = 7; 
 var state = "all"; //open|closed|all
 
 var req = {
