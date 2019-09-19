@@ -3,7 +3,7 @@
 # This uses jq; see https://stedolan.github.io/jq/
 # Use 'brew install jq' on Mac
 
-MILESTONE="7"
+MILESTONE="11"
 STATE="all"
 
 MILESTONE_URI="https://api.github.com/repos/clarin-eric/VLO/milestones/${MILESTONE}"
